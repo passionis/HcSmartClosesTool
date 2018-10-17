@@ -7,6 +7,7 @@ import com.jtec.passion.hcsmartclosestool.base.BaseFragment;
  * 主界面
  */
 public class MainFragment extends BaseFragment {
+    public static final String TAG = MainFragment.class.getSimpleName();
 
     public static MainFragment newInstance() {
         MainFragment mainFragment = new MainFragment();
@@ -14,17 +15,17 @@ public class MainFragment extends BaseFragment {
     }
 
     @Override
-    protected void initView() {
+    public void initView() {
 
     }
 
     @Override
-    protected int fragmentContentLayoutId() {
+    public int fragmentContentLayoutId() {
         return R.layout.fragment_main;
     }
 
     @Override
-    protected void initData() {
+    public void initData() {
 
     }
 

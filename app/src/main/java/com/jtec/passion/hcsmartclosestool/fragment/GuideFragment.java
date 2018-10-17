@@ -1,9 +1,8 @@
 package com.jtec.passion.hcsmartclosestool.fragment;
 
-import android.os.Bundle;
 import android.widget.TextView;
 
-import com.blankj.utilcode.util.ObjectUtils;
+import com.blankj.utilcode.util.ToastUtils;
 import com.jtec.passion.hcsmartclosestool.R;
 import com.jtec.passion.hcsmartclosestool.base.BaseFragment;
 
@@ -25,18 +24,14 @@ public class GuideFragment extends BaseFragment {
     }
 
     @Override
-    protected void initView() {
-        Bundle arguments = getArguments();
-        if (ObjectUtils.isNotEmpty(arguments)) {
-            String params = arguments.getString("params");
-            this.params.setText(params);
-        }
+    public void initView() {
+
 
     }
 
     @Override
-    protected void initData() {
-
+    public void initData() {
+        ToastUtils.showLong("dddddddddddddd");
     }
 
     @Override
@@ -46,9 +41,11 @@ public class GuideFragment extends BaseFragment {
 
     @OnClick(R.id.params)
     public void onViewClicked() {
-
-
+        startWithPop(LoginFragment.newInstance());
     }
+
+
+
 
 
 }

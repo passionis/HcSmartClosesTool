@@ -9,7 +9,7 @@ import com.jtec.passion.hcsmartclosestool.fragment.MainFragment;
 
 import butterknife.BindView;
 
-public class MainActivity extends BaseActivity {
+public class MainActivity extends BaseActivity  {
 
     @BindView(R.id.frame_layout_main)
     FrameLayout frameLayoutMain;
@@ -34,7 +34,6 @@ public class MainActivity extends BaseActivity {
             if (fragment == null) {
                 loadRootFragment(R.id.frame_layout_main, GuideFragment.newInstance());
             }
-
         } else {
             MainFragment fragment = findFragment(MainFragment.class);
             if (fragment == null) {
@@ -42,4 +41,6 @@ public class MainActivity extends BaseActivity {
             }
         }
     }
+
+
 }

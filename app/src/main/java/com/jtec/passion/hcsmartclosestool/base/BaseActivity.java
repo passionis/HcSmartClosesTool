@@ -6,9 +6,8 @@ import org.greenrobot.eventbus.EventBus;
 
 import butterknife.ButterKnife;
 import butterknife.Unbinder;
-import me.yokeyword.fragmentation.ISupportActivity;
 
-public abstract class BaseActivity extends MySupportActivity implements ISupportActivity {
+public abstract class BaseActivity extends MySupportActivity  {
 
     private Unbinder mUnbinder;
 

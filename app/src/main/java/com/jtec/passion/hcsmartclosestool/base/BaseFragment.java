@@ -13,12 +13,10 @@ import org.greenrobot.eventbus.EventBus;
 
 import butterknife.ButterKnife;
 import butterknife.Unbinder;
-import me.yokeyword.fragmentation.ISupportFragment;
 
-public abstract class BaseFragment extends MySupportFragment implements ISupportFragment {
+public abstract class BaseFragment extends MySupportFragment {
 
     private Unbinder mUnbinder;
-
 
     @Nullable
     @Override
@@ -26,6 +24,7 @@ public abstract class BaseFragment extends MySupportFragment implements ISupport
         View view = inflater.inflate(fragmentContentLayoutId(), container, false);
         mUnbinder = ButterKnife.bind(this, view);
         initView();
+
         return view;
     }
 
@@ -35,7 +34,6 @@ public abstract class BaseFragment extends MySupportFragment implements ISupport
         super.onStart();
         initData();
     }
-
 
     @Override
     public void onDestroyView() {
@@ -54,9 +52,9 @@ public abstract class BaseFragment extends MySupportFragment implements ISupport
      *
      * @return
      */
-    protected abstract int fragmentContentLayoutId();
+    public abstract int fragmentContentLayoutId();
 
-    protected abstract void initData();
+    public abstract void initData();
 
-    protected abstract void initView();
+    public abstract void initView();
 }
