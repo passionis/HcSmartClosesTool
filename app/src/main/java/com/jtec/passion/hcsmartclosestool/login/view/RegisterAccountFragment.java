@@ -1,10 +1,11 @@
-package com.jtec.passion.hcsmartclosestool.fragment;
+package com.jtec.passion.hcsmartclosestool.login.view;
 
 import android.os.Bundle;
 import android.widget.Button;
 
 import com.jtec.passion.hcsmartclosestool.R;
 import com.jtec.passion.hcsmartclosestool.base.BaseFragment;
+import com.jtec.passion.hcsmartclosestool.base.BasePresenter;
 
 import butterknife.BindView;
 import butterknife.OnClick;
@@ -32,6 +33,11 @@ public class RegisterAccountFragment extends BaseFragment {
     @Override
     public void initView() {
 
+    }
+
+    @Override
+    public BasePresenter createPresenter() {
+        return null;
     }
 
     @OnClick(R.id.registerAccount)

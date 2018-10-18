@@ -4,7 +4,7 @@ import android.widget.FrameLayout;
 
 import com.blankj.utilcode.util.SPUtils;
 import com.jtec.passion.hcsmartclosestool.base.BaseActivity;
-import com.jtec.passion.hcsmartclosestool.fragment.GuideFragment;
+import com.jtec.passion.hcsmartclosestool.login.view.GuideFragment;
 import com.jtec.passion.hcsmartclosestool.fragment.MainFragment;
 
 import butterknife.BindView;

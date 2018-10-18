@@ -1,10 +1,11 @@
-package com.jtec.passion.hcsmartclosestool.fragment;
+package com.jtec.passion.hcsmartclosestool.login.view;
 
 import android.widget.TextView;
 
 import com.blankj.utilcode.util.ToastUtils;
 import com.jtec.passion.hcsmartclosestool.R;
 import com.jtec.passion.hcsmartclosestool.base.BaseFragment;
+import com.jtec.passion.hcsmartclosestool.base.BasePresenter;
 
 import butterknife.BindView;
 import butterknife.OnClick;
@@ -27,6 +28,11 @@ public class GuideFragment extends BaseFragment {
     public void initView() {
 
 
+    }
+
+    @Override
+    public BasePresenter createPresenter() {
+        return null;
     }
 
     @Override

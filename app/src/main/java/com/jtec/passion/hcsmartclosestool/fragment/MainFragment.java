@@ -2,6 +2,7 @@ package com.jtec.passion.hcsmartclosestool.fragment;
 
 import com.jtec.passion.hcsmartclosestool.R;
 import com.jtec.passion.hcsmartclosestool.base.BaseFragment;
+import com.jtec.passion.hcsmartclosestool.base.BasePresenter;
 
 /**
  * 主界面
@@ -17,6 +18,11 @@ public class MainFragment extends BaseFragment {
     @Override
     public void initView() {
 
+    }
+
+    @Override
+    public BasePresenter createPresenter() {
+        return null;
     }
 
     @Override

@@ -14,9 +14,21 @@ import org.greenrobot.eventbus.EventBus;
 import butterknife.ButterKnife;
 import butterknife.Unbinder;
 
-public abstract class BaseFragment extends MySupportFragment {
+public abstract class BaseFragment<V, T extends BasePresenter<V>> extends MySupportFragment {
+
+    public T mPresenter;
 
     private Unbinder mUnbinder;
+
+    @Override
+    public void onCreate(@Nullable Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        mPresenter = createPresenter();
+
+        if (ObjectUtils.isNotEmpty(mPresenter)) {
+            mPresenter.attachView((V) this);
+        }
+    }
 
     @Nullable
     @Override
@@ -42,6 +54,10 @@ public abstract class BaseFragment extends MySupportFragment {
             mUnbinder.unbind();
         }
 
+        if (ObjectUtils.isNotEmpty(mPresenter)) {
+            mPresenter.detachView();
+        }
+
         if (EventBus.getDefault().isRegistered(this)) {
             EventBus.getDefault().unregister(this);
         }
@@ -57,4 +73,6 @@ public abstract class BaseFragment extends MySupportFragment {
     public abstract void initData();
 
     public abstract void initView();
+
+    public abstract T createPresenter();
 }
