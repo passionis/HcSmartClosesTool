@@ -71,7 +71,7 @@ public class LoginFragment extends BaseFragment<ILoginVIew, LoginPresenter<ILogi
         if (resultCode == RESULT_OK && requestCode == QRE_REGISTER_ACCOUNT) {
             if (ObjectUtils.isNotEmpty(data)) {
                 String f1 = data.getString("f");
-                LogUtils.e("f1 = " + f1);
+                LogUtils.e("f1 ddddd= " + f1);
             }
         }
     }
