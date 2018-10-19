@@ -6,7 +6,7 @@ import com.jtec.passion.hcsmartclosestool.login.model.ILoginModel;
 import com.jtec.passion.hcsmartclosestool.login.model.LoginModel;
 import com.jtec.passion.hcsmartclosestool.login.view.ILoginVIew;
 
-public class LoginPresenter<T extends ILoginVIew> extends BasePresenter<T> implements ILoginPre {
+public class LoginPresenter<V extends ILoginVIew> extends BasePresenter<V> implements ILoginPre {
 
     private ILoginModel mLoginModel = new LoginModel();
 
